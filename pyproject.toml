@@ -30,7 +30,7 @@ urls.Repository = "https://github.com/openedx/i18n-tools"
 dependencies = [
     "Django",
     "polib",
-    "path<=16.16.0",
+    "path",
     "pyYaml",
     "lxml[html_clean]",
 ]
@@ -51,16 +51,13 @@ package = true
 constraint-dependencies = [
     "Django<6.0",
     "elasticsearch<7.14.0",
-    "path<=16.16.0",
 ]
 conflicts = [
     [{ group = "django42" }, { group = "django52" }],
 ]
 
 [tool.edx_lint]
-uv_constraints = [
-    "path<=16.16.0",
-]
+uv_constraints = []
 
 [dependency-groups]
 test-base = [
